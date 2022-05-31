@@ -1,0 +1,74 @@
+{
+  "name": "vscode-exa",
+  "displayName": "EXALang",
+  "description": "Tree-sitter powered language extension for the EXA programming language from Zachtronics' EXAPUNKS.",
+  "version": "1.0.0",
+  "publisher": "ethall",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ethall/vscode-exa"
+  },
+  "engines": {
+    "vscode": "^1.66.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "activationEvents": [
+    "onLanguage:exa"
+  ],
+  "main": "./out/extension",
+  "files": [
+    "bin/"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "exa",
+        "aliases": [
+          "EXA",
+          "exa"
+        ],
+        "extensions": [
+          ".exa"
+        ]
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "lint": "eslint src --ext ts",
+    "pretest": "npm run compile && npm run lint",
+    "test": "mocha --config .mocharc.yml",
+    "coverage": "nyc --nycrc-path='.nycrc.json' npm run test"
+  },
+  "devDependencies": {
+    "@istanbuljs/nyc-config-typescript": "^1.0.2",
+    "@types/chai": "^4.3.1",
+    "@types/mocha": "^9.1.1",
+    "@types/node": "14.x",
+    "@types/vscode": "^1.66.0",
+    "@typescript-eslint/eslint-plugin": "^5.22.0",
+    "@typescript-eslint/parser": "^5.22.0",
+    "chai": "^4.3.6",
+    "eslint": "^8.14.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-import-resolver-typescript": "^2.7.1",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jsdoc": "^39.2.9",
+    "eslint-plugin-prettier": "^4.0.0",
+    "mocha": "^9.2.2",
+    "nyc": "^15.1.0",
+    "prettier": "^2.6.2",
+    "source-map-support": "^0.5.21",
+    "ts-node": "^10.7.0",
+    "typescript": "^4.6.4"
+  },
+  "dependencies": {
+    "vscode-jsonrpc": "^8.0.1",
+    "vscode-languageclient": "^8.0.1"
+  }
+}
