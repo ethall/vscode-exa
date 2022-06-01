@@ -1,16 +1,16 @@
-import * as path from "path"
 import * as vscode from "vscode"
-import { RequestType } from "vscode-jsonrpc"
 import {
   LanguageClient,
   LanguageClientOptions,
   ServerOptions,
 } from "vscode-languageclient/node"
 
+import { getServerFilepath } from "./platform"
+
 let client: LanguageClient
 
 export function activate(context: vscode.ExtensionContext) {
-  const serverModule = context.asAbsolutePath(path.join("bin", "exa-language-server.exe"))
+  const serverModule = context.asAbsolutePath(getServerFilepath())
 
   const serverOptions: ServerOptions = {
     run: { command: serverModule },
