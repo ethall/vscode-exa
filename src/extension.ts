@@ -6,6 +6,7 @@ import {
 } from "vscode-languageclient/node"
 
 import { getServerFilepath } from "./platform"
+import { ReadDocumentationRequest } from "./rpc"
 
 let client: LanguageClient
 
@@ -24,8 +25,25 @@ export function activate(context: vscode.ExtensionContext) {
     },
   }
 
-  client = new LanguageClient("exalang", "EXALang", serverOptions, clientOptions)
-  void client.start()
+  client = new LanguageClient("exalang", "EXALang", serverOptions, clientOptions, true)
+  void client.start().then(() => {
+    client
+      .sendRequest(ReadDocumentationRequest, {
+        uri: vscode.Uri.joinPath(
+          context.extensionUri,
+          "third_party",
+          "docs.EN.json"
+        ).toString(),
+      })
+      .then((response) => {
+        console.log("<-[ReadDocumentationRequest] <OK>")
+        console.log(response)
+      })
+      .catch((reason) => {
+        console.log("<-[ReadDocumentationRequest] <FAIL> ")
+        console.log(reason)
+      })
+  })
 }
 
 // Called when the extension is deactivated.
