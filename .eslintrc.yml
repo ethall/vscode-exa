@@ -59,6 +59,13 @@ rules:
     - allowDeclarations: false
       allowDefinitionFiles: true
   "@typescript-eslint/no-floating-promises": error
+  "@typescript-eslint/restrict-template-expressions":
+    - warn
+    - allowNumber: true
+      allowBoolean: true
+      allowAny: false
+      allowNullish: true
+      allowRegExp: false
   semi: off
   "@typescript-eslint/semi": off
   "@typescript-eslint/unified-signatures": warn
