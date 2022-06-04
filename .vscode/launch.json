@@ -9,6 +9,9 @@
             "name": "Run Extension",
             "type": "extensionHost",
             "request": "launch",
+            "env": {
+              "RUST_BACKTRACE": "1"
+            },
             "args": [
                 "--extensionDevelopmentPath=${workspaceFolder}"
             ],
