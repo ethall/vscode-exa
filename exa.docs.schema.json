@@ -10,22 +10,10 @@
   "definitions": {
     "description": {
       "$id": "#/definitions/description",
+      "type": "string",
       "description": "The Markdown content to display for this language element.",
       "readOnly": true,
-      "writeOnly": false,
-      "oneOf": [
-        {
-          "type": "string"
-        },
-        {
-          "type": "array",
-          "items": {
-            "type": "string",
-            "readOnly": true,
-            "writeOnly": false
-          }
-        }
-      ]
+      "writeOnly": false
     }
   },
   "properties": {
