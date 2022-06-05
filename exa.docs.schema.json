@@ -55,15 +55,9 @@
             "readOnly": true,
             "writeOnly": false,
             "items": {
-              "type": "object",
+              "type": "string",
               "readOnly": true,
-              "writeOnly": false,
-              "required": ["description"],
-              "properties": {
-                "description": {
-                  "$ref": "#/definitions/description"
-                }
-              }
+              "writeOnly": false
             }
           }
         }
