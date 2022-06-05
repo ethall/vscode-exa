@@ -37,6 +37,7 @@
     ]
   },
   "scripts": {
+    "precompile": "node ./scripts/precompile.js",
     "vscode:prepublish": "npm run compile",
     "compile": "tsc -p ./",
     "watch": "tsc -watch -p ./",
@@ -60,6 +61,8 @@
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-jsdoc": "^39.2.9",
     "eslint-plugin-prettier": "^4.0.0",
+    "glob": "^8.0.3",
+    "js-yaml": "^4.1.0",
     "mocha": "^9.2.2",
     "nyc": "^15.1.0",
     "prettier": "^2.6.2",

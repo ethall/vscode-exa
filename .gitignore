@@ -1,3 +1,6 @@
+# Generated files
+third_party/docs.*.json
+
 # Logs
 logs
 *.log
