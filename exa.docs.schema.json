@@ -17,6 +17,11 @@
     }
   },
   "properties": {
+    "copyright": {
+      "type": "string",
+      "readOnly": true,
+      "writeOnly": false
+    },
     "documentation": {
       "type": "array",
       "readOnly": true,

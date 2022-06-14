@@ -1,5 +1,7 @@
 # yaml-language-server: $schema=../exa.docs.schema.json
 
+copyright: EXAPUNKS is (c) 2018 Zachtronics. All rights reserved.
+
 # TODO: revise the wording of operand descriptions to be intruction-specific.
 documentation:
   # Registers
