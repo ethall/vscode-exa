@@ -18,7 +18,7 @@ documentation:
     description: >
       The **F** register allows an EXA to read and write the contents of a held file. When an
       EXA grabs a file, its “file cursor” will be set to the first value in the file. Reading from
-      the **F** register will read this value; Writing to the **F** register will overwrite this value.
+      the **F** register will read this value; writing to the **F** register will overwrite this value.
       After reading or writing the **F** register, the file cursor will automatically advance.
       Writing to the end of the file will append a new value instead of overwriting.
   - name: M
