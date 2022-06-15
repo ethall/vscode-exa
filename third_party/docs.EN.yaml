@@ -132,6 +132,7 @@ documentation:
 
   # Testing Values
   - name: TEST
+    key: TEST-COMPARE
     description: >
       Compare the value of the first operand to the value of the second operand. If they are
       equal, set the **T** register to 1, otherwise set the **T** register to 0. The same syntax is used
@@ -171,8 +172,10 @@ documentation:
   - name: MODE
     description: Toggle the **M** register between global and local mode.
   - name: VOID
+    key: VOID-MESSAGE
     description: Read and discard a value from the **M** register.
   - name: TEST
+    key: TEST-MESSAGE
     description: >
       If this EXA could read from another EXA without pausing, set the **T** register to 1,
       otherwise set the **T** register to 0.
@@ -202,6 +205,7 @@ documentation:
     operands:
       - A register, or a number between -9999 and 9999.
   - name: VOID
+    key: VOID-FILE
     description: Remove the value highlighted by the file cursor from the currently held file.
     operands:
       - The **F** register.
@@ -210,6 +214,7 @@ documentation:
   - name: WIPE
     description: Delete the currently held file.
   - name: TEST
+    key: TEST-FILE
     description: >
       If the file pointer is currently at the end of the held file, set the **T** register to 1, otherwise
       set the **T** register to 0.

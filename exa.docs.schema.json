@@ -39,6 +39,12 @@
             "writeOnly": false,
             "pattern": "^(#?[a-zA-Z]{4}|[a-zA-Z])$"
           },
+          "key": {
+            "type": "string",
+            "description": "Optional, unique string to differentiate documentation items with the same name.",
+            "readOnly": true,
+            "writeOnly": false
+          },
           "description": {
             "$ref": "#/definitions/description"
           },
